@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "extends": ["noise"],
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "import/no-internal-modules": "off"
+  },
+  "overrides": [
+    {
+      "files": [".storybook/*.js"],
+      "rules": {
+        "import/no-unassigned-import": "off"
+      }
+    },
+    {
+      "files": ["stories/**"],
+      "extends": ["noise-browser", "noise-react"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}
